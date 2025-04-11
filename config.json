@@ -1,5 +1,5 @@
 
 {
-    "service": "",
-    "output_file_format": ""
+    "service": "Telegram",
+    "output_file_format": "xlsx"
 }

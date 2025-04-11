@@ -1,8 +1,6 @@
 pandas
 openpyxl
-openpyxl
-google-api-python-client 
-google-auth 
 boto3 
 requests 
 python-telegram-bot
+dotenv

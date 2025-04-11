@@ -19,16 +19,17 @@ except FileNotFoundError:
     print(f"Файл {json_path} не найден!")
 except json.JSONDecodeError:
     print("Ошибка: файл не является валидным JSON!")
+    
+
+dfs = {"CPA": pd.DataFrame({"Name": ["Alice", "Bob"], "Age": [25, 30]}),"ROI": pd.DataFrame({"Name": ["Alice", "Bob"], "Age": [30, 55]})}
 
 if config['service'] == 'Telegram':
     TOKEN = os.getenv('BOT_TOKEN')
     CHAT_ID = os.getenv('CHAT_ID')
 
-
-    df = pd.DataFrame({"Name": ["Alice", "Bob"], "Age": [25, 30]})
-
-    tg = TelegramSender(TOKEN, CHAT_ID)
-    tg.send_dataframe(df, 'itog', 'csv')
+    for name, df in dfs.items():
+        tg = TelegramSender(TOKEN, CHAT_ID)
+        tg.send_dataframe(df, name, config['output_file_format'])
     
 elif config['service'] == 'S3':
     S3_ACCESS_KEY= os.getenv('ACCESS_KEY'),
