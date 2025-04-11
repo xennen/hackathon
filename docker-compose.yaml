@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  python-hackathon:
+    image: python:3.11-slim
+    container_name: hackathon
+    working_dir: /hackathon
+    volumes:
+      - .:/hackathon
+    command: sh -c "pip install -r requirements.txt && python src/run.py"
+    environment:
+      - PYTHONUNBUFFERED=1
