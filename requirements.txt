@@ -4,3 +4,5 @@ boto3
 requests 
 python-telegram-bot
 dotenv
+ChannelAttribution
+matplotlib
