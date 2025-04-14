@@ -7,7 +7,7 @@
 Перед запуском проекта убедитесь, что у вас установлены:
 
 - **Docker** (с поддержкой Docker Compose)  
-  [Скачать Docker](https://www.docker.com/products/docker-desktop)
+  [Скачать Docker](https://docs.docker.com/get-started/get-docker/)
 - **Docker Compose** (если не встроен в вашу версию Docker)  
   [Инструкция по установке](https://docs.docker.com/compose/install/)
 
